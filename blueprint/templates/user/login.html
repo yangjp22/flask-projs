@@ -1,0 +1,15 @@
+{% extends 'user/base.html' %}
+
+{% block title %}
+    用户登录
+{% endblock %}
+
+{% block content %}
+    <div style="margin: 0 auto; width:50%;">
+        <form action="{{url_for('user.login')}}" method="post">
+            <input placeholder="User Name" name="username" /><br />
+            <input placeholder="Password" name="pwd" /><br />
+            <button type='submit'>Login</button>
+        </form>
+    </div>
+{% endblock %}

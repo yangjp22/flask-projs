@@ -1,0 +1,22 @@
+{% extends 'user/base.html' %}
+
+{% block title %}
+    用户列表
+{% endblock %}
+
+{% block content %}
+    <div style="margin: 0 auto; width:50%;"> 
+        <a href="{{url_for('user.login')}}">Log In</a>
+        <a href="{{url_for('user.register')}}">Register</a>
+    </div>
+    <p>Current users: {{users|length}}</p>
+    <table>
+        {% for each in users %}
+            <tr>
+                <td>{{each.username}}</td>
+                <td>{{each.phone}}</td>
+                <td>{{each.password}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
