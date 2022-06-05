@@ -1,0 +1,32 @@
+{% extends 'user/base.html' %}
+
+{% block title %}
+User List
+{% endblock %}
+
+{% block body %}
+    <div>
+        <a href='{{url_for("user.register")}}'>Register</a>
+        <a></a>
+        <a></a>
+    </div>
+    {% if users %}
+        <table width="50%">
+            {% for user in users %}
+            <tr>
+                <th>{{user.id}}</th>
+                <th>{{user.username}}</th>
+                <th>{{user.phone}}</th>
+                <!-- <td>{{user.rdatetime}}</td> -->
+                <th>
+                    <a>Modify</a>
+                    <a href="{{url_for('user.delete')}}?id={{user.id}}">Delete</a>
+                
+                </th>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>There is no users now.</p>
+    {% endif %}
+{% endblock %}

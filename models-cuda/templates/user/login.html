@@ -1,0 +1,15 @@
+{% extends 'user/base.html' %}
+
+{% block title %}
+    login
+{% endblock %}
+
+{% block body %}
+    <h1>User Login</h1>
+    <p style="color: red;">{{ msg }}</p>
+    <form action="{{url_for('user.login')}}" method='post'><br />
+        <input type='text' name='username' placeholder="username"/><br />
+        <input type='password' name='pwd' placeholder="password"/><br />
+        <button type='submit'>Login</button>
+    </form>
+{% endblock %}
