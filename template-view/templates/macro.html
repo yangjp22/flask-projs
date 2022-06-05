@@ -1,0 +1,6 @@
+{% macro form(action, method="post") %}
+    <form action="{{action}}" method="{{method}}" >
+        <input name="username" />
+        <input name="email" />
+    </form>
+{% endmacro %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .long{
+            color: red;
+        }
+    </style>
+
+    {% block mycss %}
+        <style>
+
+        </style>
+    {% endblock %}
+</head>
+<body>
+    <div>Hello template</div>
+    <p>{{name}}</p>
+    <ul>
+        {% for each in names %}
+                <li>{{each | ownfilter}}</li>
+        {% endfor %}
+    </ul>
+    <div>
+        {% block variable %}
+            This is the parent template
+        {% endblock %}
+    </div>
+
+    {% import 'macro.html' as f %}
+    {{ f.form('/test') }}
+</body>
+</html>
