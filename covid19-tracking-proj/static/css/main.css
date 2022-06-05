@@ -1,0 +1,155 @@
+body {
+	margin: 0;
+	background: #333;
+}
+
+#title {
+	text-align: center;
+	position: absolute;
+	width: 51%;
+	height: 10%;
+	top: 3%;
+	left: 26%;
+	/* background: #666666; */
+	color: gold;
+	font-size: 33px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#time {
+	position: absolute;
+	/* width: 30%; */
+	height: 10%;
+	right: 2%;
+	top: 10%;
+	color: red;
+	font-size: 16px;
+}
+
+#c1 {
+	position: absolute;
+	width: 20%;
+	height: 80%;
+	top: 15%;
+	left: 40%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+		/* background: #777777; */
+}
+
+#c1 .num {
+	width: 100%;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgb(30, 255, 0);
+	font-size: 15px;
+}
+
+#c1 .num h1{
+	color: rgb(30, 255, 0);
+}
+
+
+.txt {
+	width: 100%;
+	float: left;
+	font-family: "幼圆";
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.txt h2 {
+	margin: 0;
+}
+
+
+#c2 {
+	/* position: absolute;
+	width: 40%;
+	height: 65%;
+	top: 40%;
+	left: 30%;
+	background: #888888; */
+	position: absolute;
+	width: 40%;
+	height: 45%;
+	top: 60%;
+	right: 0%;
+	background: #777;
+}
+
+#l1 {
+	position: absolute;
+	width: 40%;
+	height: 45%;
+	top: 15%;
+	left: 0%;
+	background: #666666;
+}
+
+#l2 {
+	position: absolute;
+	width: 40%;
+	height: 45%;
+	top: 60%;
+	left: 0%;
+	background: #777;
+}
+
+#r1 {
+	position: absolute;
+	width: 40%;
+	height: 45%;
+	top: 15%;
+	right: 0%;
+	background: #666666;
+}
+
+#r2 {
+	position: absolute;
+	width: 30%;
+	height: 45%;
+	top: 60%;
+	right: 0%;
+	background: #777;
+}
+
+/* 此处是设置自动匹配横屏，以适应手机显示 使用下面定义的id:gyroContain   */
+@media screen and (orientation: portrait) {
+    html{
+        width : 100vmin;
+        height : 100vmax;
+    }
+    body{
+        width : 100vmin;
+        height : 100vmax;
+    }
+    #gyroContain{
+        width : 100vmax;
+        height : 100vmin;
+        transform-origin: top left;
+        transform: rotate(90deg) translate(0,-100vmin);
+    }
+  }
+@media screen and (orientation: landscape) {
+    html{
+        width : 100vmax;
+        height : 100vmin;
+    }
+    body{
+        width : 100vmax;
+        height : 100vmin;
+    }
+    #gyroContain{
+        width : 100vmax;
+        height : 100vmin;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>COVID-19 Tracking</title>
+        <script src="{{url_for('static', filename='js/jquery-1.11.1.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/echarts.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/china.js')}}"></script>
+        <script src="{{url_for('static', filename='js/echarts-wordcloud.min.js')}}"></script>
+        <link href="../static/css/main.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div id="gyroContain">
+			<div id="title">Real-Time COVID-19 Tracking Across US</div>
+			<div id="time"></div>
+			<div id="l1">我是左1</div>
+			<div id="l2">我是左2</div>
+			<div id="c1">
+				<div class="num"><h1></h1></div>
+				<div class="txt"><h2>Confirmed</h2></div>
+				<div class="num"><h1></h1></div>
+				<div class="txt"><h2>Suspected</h2></div>
+				<div class="num"><h1></h1></div>
+				<div class="txt"><h2>Recovered</h2></div>
+				<div class="num"><h1></h1></div>
+				<div class="txt"><h2>Died</h2></div>
+			</div>
+			<div id="c2">我是中2</div>
+			<div id="r1">我是右1</div>
+			<script src="{{url_for('static', filename='js/ec_center.js')}}"></script>
+			<script src="{{url_for('static', filename='js/ec_left1.js')}}"></script>
+			<script src="{{url_for('static', filename='js/ec_left2.js')}}"></script>
+			<script src="{{url_for('static', filename='js/ec_right1.js')}}"></script>
+			<script src="{{url_for('static', filename='js/ec_right2.js')}}"></script>
+			<script src="{{url_for('static', filename='js/controller.js')}}"></script>
+		</div>
+	</body>
+</html>
